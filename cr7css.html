@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cristiano Ronaldo Accomplishments</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #e2e2e2 0%, #f7f7f7 100%);
+            color: #333;
+            line-height: 1.6;
+            transition: background-color 0.3s ease;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 60px 0;
+            text-align: center;
+            color: #000;
+            border-bottom: 1px solid #eaeaea;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            font-weight: 700;
+            color: #333;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        header p {
+            font-size: 1.2em;
+            font-weight: 300;
+            color: #777;
+            opacity: 0;
+            animation: fadeIn 1.5s forwards;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: transparent;
+            padding: 15px 0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            color: #333;
+            padding: 10px 25px;
+            margin: 0 10px;
+            font-weight: 500;
+            font-size: 1em;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 5px;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #fff;
+            background-color: #333;
+        }
+
+        /* Section */
+        section {
+            max-width: 1100px;
+            margin: 80px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            animation: slideIn 1s forwards;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #000;
+            font-weight: 600;
+        }
+
+        section p {
+            font-size: 1.1em;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        /* Centered Image */
+        .centered-image {
+            display: block;
+            margin: 20px auto;
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .centered-image:hover {
+            transform: scale(1.05);
+        }
+
+        /* Accomplishments Section */
+        .accomplishments {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 30px;
+        }
+
+        .accomplishment {
+            background-color: #fff;
+            border: 1px solid #eaeaea;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+            width: 350px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .accomplishment:hover {
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .accomplishment img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .accomplishment h3 {
+            font-size: 1.5em;
+            margin: 20px 0;
+            color: #000;
+            font-weight: 600;
+        }
+
+        .accomplishment p {
+            font-size: 1em;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #555;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9em;
+            position: relative;
+            border-top: 1px solid #eaeaea;
+            margin-top: 80px;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+            color: #777;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            section h2 {
+                font-size: 2em;
+            }
+
+            .accomplishment {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav a {
+                font-size: 0.9em;
+                padding: 8px 15px;
+            }
+
+            .accomplishment {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cristiano Ronaldo</h1>
+        <p>Achievements and Accomplishments</p>
+    </header>
+
+    <nav>
+        <a href="#early">Early Career</a>
+        <a href="#awards">Major Awards</a>
+        <a href="#milestones">Career Milestones</a>
+    </nav>
+
+    <section id="early">
+        <h2>Early Career</h2>
+        <img class="centered-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk3c5CWh0SLi-fjlJRpuWZCLVG5EckrddKlg&s" alt="Cristiano Ronaldo Early Career Image">
+        <p>Cristiano Ronaldo began his career with Sporting CP before moving to Manchester United in 2003. His rapid development at the club saw him gain recognition as one of the most talented young footballers in the world.</p>
+    </section>
+
+    <section id="awards">
+        <h2>Major Awards</h2>
+        <div class="accomplishments">
+            <a href="https://www.fifa.com/the-best-fifa-football-awards" target="_blank" class="accomplishment">
+                <img src="https://media.cnn.com/api/v1/images/stellar/prod/150112173701-cristiano-ronaldo-fifa-ballon-dor.jpg?q=w_4928,h_3280,x_0,y_0,c_fill" alt="Ballon d'Or">
+                <h3>Ballon d'Or</h3>
+                <p>Won the Ballon d'Or 5 times (2008, 2013, 2014, 2016, 2017)</p>
+            </a>
+            <a href="https://www.fifa.com/the-best-fifa-football-awards" target="_blank" class="accomplishment">
+                <img src="https://editorial.uefa.com/resources/0235-0e95ffbb9dd1-368d1310f96c-1000/cristiano_ronaldo_real_madrid_portugal_.jpeg" alt="FIFA World Player of the Year">
+                <h3>FIFA World Player of the Year</h3>
+                <p>Named FIFA World Player of the Year multiple times</p>
+            </a>
+            <a href="https://www.uefa.com/uefachampionsleague/" target="_blank" class="accomplishment">
+                <img src="https://editorial.uefa.com/resources/0250-0c5117b83a72-956867b9220c-1000/cristiano_ronaldo_celebrates_his_fifth_title.jpeg" alt="UEFA Champions League">
+                <h3>UEFA Champions League Titles</h3>
+                <p>5-time Champions League winner (2008, 2014, 2016, 2017, 2018)</p>
+            </a>
+        </div>
+    </section>
+
+    <section id="milestones">
+        <h2>Career Milestones</h2>
+        <div class="accomplishments">
+            <a href="https://www.goal.com/en/news/cristiano-ronaldo-career-goals/blt2b79ac0c74e3bc03" target="_blank" class="accomplishment">
+                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/32a319207262743.Y3JvcCwxOTk5LDE1NjQsMCww.jpg" alt="900 Career Goals">
+                <h3>900+ Career Goals</h3>
+                <p>One of the highest-scoring players in football history</p>
+            </a>
+            <a href="https://www.uefa.com/uefaeuro-2020/" target="_blank" class="accomplishment">
+                <img src="https://ss-i.thgim.com/public/incoming/o70ry/article68185543.ece/alternates/LANDSCAPE_1200/GettyImages-545932232_1_.jpg" alt="UEFA Euro 2016">
+                <h3>International Success</h3>
+                <p>Winner of UEFA Euro 2016 and UEFA Nations League 2019 with Portugal</p>
+            </a>
+            <a href="https://www.uefa.com/" target="_blank" class="accomplishment">
+                <img src="https://editorial.uefa.com/resources/01db-0e725e5212d6-62bb312f891a-1000/cristiano_ronaldo_meets_his_new_fans.jpeg" alt="Record Transfers">
+                <h3>Record Transfers</h3>
+                <p>Most expensive transfer in football history at the time (2009: £80M to Real Madrid)</p>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Cristiano Ronaldo Fan Page. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
